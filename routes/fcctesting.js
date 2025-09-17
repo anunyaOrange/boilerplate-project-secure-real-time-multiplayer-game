@@ -105,7 +105,15 @@ module.exports = function (app) {
 
     // res.json({headers: hObj});
     console.log(res.getHeaders());
-    res.json(res.getHeaders());
+    var myHeaders = res.getHeaders();
+    
+    var hs = Object.keys(myHeaders).filter(h => !h.match(/^access-control-\w+/));
+    var hObj = {};
+    hs.forEach(h => {hObj[h] = myHeaders[h]});
+    delete res._headers['strict-transport-security'];
+    
+    console.log(res.getHeaders());
+    res.json({headers: hObj});
   });
 
 };
