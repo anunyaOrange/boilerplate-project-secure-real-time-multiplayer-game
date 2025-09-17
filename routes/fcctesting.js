@@ -106,19 +106,20 @@ module.exports = function (app) {
     // res.json({headers: hObj});
     console.log(res.getHeaders());
     var myHeaders = res.getHeaders();
-    
+
     var hs = Object.keys(myHeaders).filter(h => !h.match(/^access-control-\w+/));
     var hObj = {};
     hs.forEach(h => {hObj[h] = myHeaders[h]});
-    delete res._headers['strict-transport-security'];
+    // delete res._headers['strict-transport-security'];
     
-    console.log(res.getHeaders());
+    console.log({headers: hObj});
     res.json({headers: hObj});
   });
 
 };
 
 function testFilter(tests, type, n) {
+  console.log('testFilter called');
   var out;
   switch (type) {
     case 'unit':
