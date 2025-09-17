@@ -104,8 +104,8 @@ module.exports = function (app) {
     // delete res.headers['strict-transport-security'];
 
     // res.json({headers: hObj});
-    console.log(res.headers);
-    return res.json(res.headers);
+    console.log(res.getHeaders());
+    res.json(res.getHeaders());
   });
 
 };
