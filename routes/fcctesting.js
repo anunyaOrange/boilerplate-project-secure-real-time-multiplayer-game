@@ -31,6 +31,8 @@ const cors = require('cors');
 const fs = require('fs');
 const runner = require('../test-runner');
 
+console.log("CALL fcctesting");
+
 module.exports = function (app) {
 
   app.route('/_api/server.js')
