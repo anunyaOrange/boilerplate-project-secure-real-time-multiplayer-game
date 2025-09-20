@@ -31,7 +31,7 @@ const cors = require('cors');
 const fs = require('fs');
 const runner = require('../test-runner');
 
-console.log("CALL fcctesting");
+console.log("CALL fcctesting XXXXX");
 
 module.exports = function (app) {
 
