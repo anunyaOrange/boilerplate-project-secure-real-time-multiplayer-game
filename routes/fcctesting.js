@@ -83,7 +83,8 @@ module.exports = function (app) {
     });
 
   var error;
-  app.get('/_api/get-tests', cors(), function (req, res, next) {
+  // app.get('/_api/get-tests', cors(), function (req, res, next) {
+  app.get('/_api/get-tests', function (req, res, next) {
     console.log("error", error);
     if (!error && process.env.NODE_ENV === 'test') return next();
     res.json({ status: 'unavailable' });
@@ -115,11 +116,11 @@ module.exports = function (app) {
 
     var hs = Object.keys(myHeaders).filter(h => !h.match(/^access-control-\w+/));
     var hObj = {};
-    hs.forEach(h => {hObj[h] = myHeaders[h]});
+    hs.forEach(h => { hObj[h] = myHeaders[h] });
     // delete res._headers['strict-transport-security'];
-    
-    console.log({headers: hObj});
-    res.json({headers: hObj});
+
+    console.log({ headers: hObj });
+    res.json({ headers: hObj });
   });
 
 };
