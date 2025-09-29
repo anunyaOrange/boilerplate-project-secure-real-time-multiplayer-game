@@ -14,7 +14,6 @@ const app = express();
 //For FCC testing purposes and enables user to connect from outside the hosting platform
 app.use(cors({origin: '*'}));
 
-// WHAT T F
 // app.use(
 //   helmet({
 //     contentSecurityPolicy: false, // optional if CSP not required
