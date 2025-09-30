@@ -16,7 +16,7 @@ app.use(cors({origin: '*'}));
 
 // app.use(
 //   helmet({
-//     contentSecurityPolicy: false, // optional if CSP not required
+//     contentSecurityPolicy: false,
 //     crossOriginEmbedderPolicy: false // optional
 //   })
 // );
