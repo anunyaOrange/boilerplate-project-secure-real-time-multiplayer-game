@@ -24,7 +24,6 @@
 *
 *
 */
-// F F F 
 
 var analyser = require('./assertion-analyser');
 var EventEmitter = require('events').EventEmitter;
