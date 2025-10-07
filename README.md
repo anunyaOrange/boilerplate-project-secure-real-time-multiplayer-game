@@ -1,6 +1,4 @@
-# THIS IS NOT WORK; It is failed with no reason
-## still not work
-## re-check and still not work
+# FINALLY Work!
 
 # Secure Real Time Multiplayer Game
 
